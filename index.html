@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Racvest &mdash; Send Anything. Earn Anywhere.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body data-theme="light">
+<nav id="main-nav">
+  <a class="nav-logo" href="./index.html">
+    <span class="rac">Rac</span><span class="vest">vest</span>
+  </a>
+  <ul class="nav-links">
+    <li><a class="active" href="./index.html">Home</a></li>
+    <li><a href="#how">How It Works</a></li>
+    <li><a href="#earn">Earn</a></li>
+    <li><a href="./download.html">Download</a></li>
+    <li><a href="./contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="theme-toggle" type="button" onclick="toggleTheme()" aria-label="Switch color theme">
+      <span class="theme-toggle-icon" aria-hidden="true">&#9790;</span>
+      <span class="theme-toggle-text"></span>
+    </button>
+    <a class="btn-primary" href="./download.html">Get App</a>
+  </div>
+  <button class="nav-burger" type="button" onclick="toggleMobileNav()" aria-label="Toggle menu" aria-controls="mobile-nav" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="nav-mobile" id="mobile-nav">
+  <button class="nav-mobile-close" type="button" onclick="closeMobileNav()">&times;</button>
+  <button class="theme-toggle mobile-theme-toggle" type="button" onclick="toggleTheme()" aria-label="Switch color theme">
+    <span class="theme-toggle-icon" aria-hidden="true">&#9790;</span>
+    <span class="theme-toggle-text"></span>
+  </button>
+  <a href="./index.html" onclick="closeMobileNav()">Home</a>
+  <a href="#how" onclick="closeMobileNav()">How It Works</a>
+  <a href="#earn" onclick="closeMobileNav()">Earn</a>
+  <a href="./download.html" onclick="closeMobileNav()">Download</a>
+  <a href="./contact.html" onclick="closeMobileNav()">Contact</a>
+</div>
+
+<!-- HERO -->
+  <section class="hero">
+    <div class="hero-badge">
+      <span class="dot"></span> Now available in Nigeria &amp; beyond
+    </div>
+    <h1>
+      <span class="hero-line">Send <span class="accent">anything</span>,</span><br>
+      anytime, <span class="accent-y">anywhere</span>.
+    </h1>
+    <p class="hero-sub">
+      Racvest connects senders to a network of reliable couriers and travellers ready to deliver fast, safe, and affordable — while letting you <strong>earn on every trip</strong>.
+    </p>
+    <div class="hero-actions">
+      <a class="btn-hero-primary" href="./download.html">
+        Start Sending
+      </a>
+      <a class="btn-hero-secondary" href="./download.html">
+        Become a Courier
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num">2K<span class="plus">+</span></div>
+        <div class="stat-label">Packages Delivered</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">5K<span class="plus">+</span></div>
+        <div class="stat-label">Active Couriers</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">99<span class="plus">%</span></div>
+        <div class="stat-label">Delivery Success</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">14<span class="plus">+</span></div>
+        <div class="stat-label">Cities Covered</div>
+      </div>
+    </div>
+
+    <!-- Phone Mockups -->
+    <div class="hero-phones">
+      <div class="phone-card">
+        <div class="phone-screen dark">
+          <div class="phone-bar"><span>9:41</span><span>▐▐ ▐</span></div>
+          <div class="phone-content">
+            <div class="phone-tag">SENDER</div>
+            <div class="phone-title">Send anything,<br>anytime, anywhere.</div>
+            <div class="phone-sub">Fast, safe, reliable delivery network at your fingertips.</div>
+            <div class="phone-btn">Get Started →</div>
+          </div>
+        </div>
+      </div>
+      <div class="phone-card">
+        <div class="phone-screen">
+          <div class="phone-bar"><span>9:41</span><span>▐▐ ▐</span></div>
+          <div class="phone-content">
+            <div class="phone-tag">PACKAGES</div>
+            <div class="phone-title">3 Deliveries<br>Ready</div>
+            <div class="phone-sub">Earn ₦8,500 today from trips you were already taking.</div>
+            <div class="phone-btn">View Deliveries →</div>
+          </div>
+        </div>
+      </div>
+      <div class="phone-card">
+        <div class="phone-screen yellow">
+          <div class="phone-bar"><span>9:41</span><span>▐▐ ▐</span></div>
+          <div class="phone-content">
+            <div class="phone-tag">COURIER</div>
+            <div class="phone-title">Turn your rides<br>into earnings!</div>
+            <div class="phone-sub">Car, bike or public transport? earn extra money on your schedule.</div>
+            <div class="phone-btn">Sign Up →</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker-wrap">
+    <div class="ticker-track">
+      <span>Fast Delivery</span><span>Trusted Couriers</span><span>Earn on the Go</span>
+      <span>Track in Real-Time</span><span>Secure Payments</span><span>Send Anything</span>
+      <span>Nationwide Network</span><span>Join for Free</span><span>Instant Matching</span>
+      <!-- duplicate for seamless loop -->
+      <span>Fast Delivery</span><span>Trusted Couriers</span><span>Earn on the Go</span>
+      <span>Track in Real-Time</span><span>Secure Payments</span><span>Send Anything</span>
+      <span>Nationwide Network</span><span>Join for Free</span><span>Instant Matching</span>
+    </div>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <section id="how">
+    <div class="section-label">How it works</div>
+    <h2 class="section-title">Simple. Fast. <span class="accent">Reliable.</span></h2>
+    <p class="section-desc">From package to doorstep in a few taps. No hassle, no delays.</p>
+
+    <div class="how-grid">
+      <div class="how-card reveal">
+        <div class="how-num">01</div>
+        <div class="how-icon">Plan</div>
+        <h3>Post your package</h3>
+        <p>Enter pickup &amp; delivery location, describe your package, and set your preferred delivery time.</p>
+      </div>
+      <div class="how-card reveal">
+        <div class="how-num">02</div>
+        <div class="how-icon">Match</div>
+        <h3>Match with a courier</h3>
+        <p>Get matched instantly with a trusted courier or traveller heading your way. Review their profile &amp; ratings.</p>
+      </div>
+      <div class="how-card reveal">
+        <div class="how-num">03</div>
+        <div class="how-icon">Track</div>
+        <h3>Track in real-time</h3>
+        <p>Follow your package live on the map. Stay updated with every milestone from pickup to delivery.</p>
+      </div>
+      <div class="how-card reveal">
+        <div class="how-num">04</div>
+        <div class="how-icon">Done</div>
+        <h3>Delivered &amp; confirmed</h3>
+        <p>Recipient confirms delivery. Payment releases automatically. Rate your courier and done!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DUAL ROLE -->
+  <section id="earn">
+    <div class="section-label">Two ways to use Racvest</div>
+    <h2 class="section-title">Send packages.<br><span class="accent-y">Earn money.</span></h2>
+    <div class="dual-section">
+      <div class="dual-card sender reveal">
+        <div class="card-icon">Send</div>
+        <h3>I want to Send</h3>
+        <p>Need to send a package across town or across the country? Racvest connects you to couriers ready to deliver safely.</p>
+        <ul class="dual-list">
+          <li><span class="chk">✓</span> Post your package in under 2 minutes</li>
+          <li><span class="chk">✓</span> Instant matching with verified couriers</li>
+          <li><span class="chk">✓</span> Real-time tracking from door to door</li>
+          <li><span class="chk">✓</span> Secure payment, only released on delivery</li>
+          <li><span class="chk">✓</span> 24/7 support for every shipment</li>
+        </ul>
+        <a class="dual-cta" href="./download.html">Send a Package →</a>
+      </div>
+      <div class="dual-card earner reveal">
+        <div class="card-icon">Earn</div>
+        <h3>I want to Earn</h3>
+        <p>Got a car, bike, or just using public transport? Deliver packages along your route and earn extra income on your own schedule.</p>
+        <ul class="dual-list">
+          <li><span class="chk">✓</span> Earn on trips you were already taking</li>
+          <li><span class="chk">✓</span> Flexible hours, work when you want</li>
+          <li><span class="chk">✓</span> Instant payouts to your bank account</li>
+          <li><span class="chk">✓</span> Refer friends &amp; earn bonus income</li>
+          <li><span class="chk">✓</span> No vehicle? No problem, use transit</li>
+        </ul>
+        <a class="dual-cta" href="./download.html">Start Earning →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section>
+    <div class="section-label">Why Racvest</div>
+    <h2 class="section-title">Built for <span class="accent">trust</span> &amp; speed.</h2>
+    <div class="features-strip">
+      <div class="feat-item reveal">
+        <div class="ico">Safe</div>
+        <h4>Verified Couriers</h4>
+        <p>Every courier goes through identity verification and background checks before joining.</p>
+      </div>
+      <div class="feat-item reveal">
+        <div class="ico">Fast</div>
+        <h4>Lightning Matching</h4>
+        <p>AI-powered matching finds the closest available courier within seconds of your posting.</p>
+      </div>
+      <div class="feat-item reveal">
+        <div class="ico">Live</div>
+        <h4>Live Tracking</h4>
+        <p>Watch your package move on a live map. Know exactly where it is, always.</p>
+      </div>
+      <div class="feat-item reveal">
+        <div class="ico">Chat</div>
+        <h4>In-App Chat</h4>
+        <p>Message your courier directly inside the app. No need to share personal numbers.</p>
+      </div>
+      <div class="feat-item reveal">
+        <div class="ico">Cover</div>
+        <h4>Package Protection</h4>
+        <p>Every delivery is covered in our policy. If something goes wrong, we've got you protected.</p>
+      </div>
+      <div class="feat-item reveal">
+        <div class="ico">Reach</div>
+        <h4>Nationwide Coverage</h4>
+        <p>18+ cities and growing. Send across states, not just across town.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION / STATS -->
+  <div class="mission-strip reveal">
+    <div class="mission-text">
+      <div class="section-label">Our Mission</div>
+      <h2 class="section-title">Making logistics work <span class="accent">for everyone</span></h2>
+      <p class="section-desc" style="margin-bottom:1.5rem;">
+        In Africa, millions of people struggle with unreliable delivery systems. Racvest is changing that by turning everyday trips into delivery opportunities and connecting senders to a network that's already on the move.
+      </p>
+      <p class="section-desc">
+        Whether you're a student, a trader, a driver or just someone heading home. Racvest puts extra income in your pocket.
+      </p>
+    </div>
+    <div class="mission-visual">
+      <div class="mission-ring">
+        <div class="mission-ring-inner">
+          <div class="ring-stat">68%</div>
+          <div class="ring-label">Delivery Success Rate</div>
+          <div class="ring-label" style="font-size:.65rem; color: var(--g-bright); margin-top:.3rem;">increased by Racvest</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials-section">
+    <div class="testi-header">
+      <div class="section-label">Testimonials</div>
+      <h2 class="section-title">People love <span class="accent">Racvest</span></h2>
+    </div>
+    <div class="testi-track-wrap">
+      <div class="testi-track">
+        <!-- originals -->
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"I sent my products to a client in Abuja from Lagos and it arrived the next morning. Racvest is simply the most reliable delivery app I've used in Nigeria."</p>
+          <div class="testi-author">
+            <div class="testi-avatar" style="background:rgba(46,204,110,.2);color:var(--g-bright);">AO</div>
+            <div><div class="testi-name">Adaeze O.</div><div class="testi-role">Small Business Owner, Lagos</div></div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"I travel from Ibadan to Lagos every week for work. Now I pick up 2–3 packages and earn ₦8,000 extra per trip. It literally pays for my fuel!"</p>
+          <div class="testi-author">
+            <div class="testi-avatar" style="background:rgba(255,209,102,.2);color:var(--yellow);">KA</div>
+            <div><div class="testi-name">Kunle A.</div><div class="testi-role">Courier & Commuter, Ibadan</div></div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"The live tracking is amazing. I could see my package moving in real time and the courier even sent me a photo at delivery. 10/10 service!"</p>
+          <div class="testi-author">
+            <div class="testi-avatar" style="background:rgba(46,204,110,.15);color:var(--g-bright);">NI</div>
+            <div><div class="testi-name">Ngozi I.</div><div class="testi-role">Fashion Designer, Enugu</div></div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"I'm a student and I use Racvest to courier documents and small items. I've made over ₦40,000 this month just from campus trips. Game changer!"</p>
+          <div class="testi-author">
+            <div class="testi-avatar" style="background:rgba(255,209,102,.15);color:var(--yellow);">TF</div>
+            <div><div class="testi-name">Tunde F.</div><div class="testi-role">University Student, Abuja</div></div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"Posting a package is incredibly easy. Within 5 minutes I had a courier confirmed. The payment held safely until delivery was confirmed. Trust is everything."</p>
+          <div class="testi-author">
+            <div class="testi-avatar" style="background:rgba(46,204,110,.2);color:var(--g-bright);">EM</div>
+            <div><div class="testi-name">Emeka M.</div><div class="testi-role">E-Commerce Seller, Port Harcourt</div></div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"I was sceptical at first but after my first delivery experience, I became a daily sender. Affordable, reliable, and the support team is always responsive."</p>
+          <div class="testi-author">
+            <div class="testi-avatar" style="background:rgba(255,209,102,.2);color:var(--yellow);">RI</div>
+            <div><div class="testi-name">Remi I.</div><div class="testi-role">Pharmacist, Kano</div></div>
+          </div>
+        </div>
+        <!-- duplicates for seamless loop -->
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"I sent my products to a client in Abuja from Lagos and it arrived the next morning. Racvest is simply the most reliable delivery app I've used in Nigeria."</p>
+          <div class="testi-author">
+            <div class="testi-avatar" style="background:rgba(46,204,110,.2);color:var(--g-bright);">AO</div>
+            <div><div class="testi-name">Adaeze O.</div><div class="testi-role">Small Business Owner, Lagos</div></div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"I travel from Ibadan to Lagos every week for work. Now I pick up 2–3 packages and earn ₦8,000 extra per trip. It literally pays for my fuel!"</p>
+          <div class="testi-author">
+            <div class="testi-avatar" style="background:rgba(255,209,102,.2);color:var(--yellow);">KA</div>
+            <div><div class="testi-name">Kunle A.</div><div class="testi-role">Courier & Commuter, Ibadan</div></div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"The live tracking is amazing. I could see my package moving in real time and the courier even sent me a photo at delivery. 10/10 service!"</p>
+          <div class="testi-author">
+            <div class="testi-avatar" style="background:rgba(46,204,110,.15);color:var(--g-bright);">NI</div>
+            <div><div class="testi-name">Ngozi I.</div><div class="testi-role">Fashion Designer, Enugu</div></div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"I'm a student and I use Racvest to courier documents and small items. I've made over ₦40,000 this month just from campus trips. Game changer!"</p>
+          <div class="testi-author">
+            <div class="testi-avatar" style="background:rgba(255,209,102,.15);color:var(--yellow);">TF</div>
+            <div><div class="testi-name">Tunde F.</div><div class="testi-role">University Student, Abuja</div></div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"Posting a package is incredibly easy. Within 5 minutes I had a courier confirmed. The payment held safely until delivery was confirmed. Trust is everything."</p>
+          <div class="testi-author">
+            <div class="testi-avatar" style="background:rgba(46,204,110,.2);color:var(--g-bright);">EM</div>
+            <div><div class="testi-name">Emeka M.</div><div class="testi-role">E-Commerce Seller, Port Harcourt</div></div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"I was sceptical at first but after my first delivery experience, I became a daily sender. Affordable, reliable, and the support team is always responsive."</p>
+          <div class="testi-author">
+            <div class="testi-avatar" style="background:rgba(255,209,102,.2);color:var(--yellow);">RI</div>
+            <div><div class="testi-name">Remi I.</div><div class="testi-role">Pharmacist, Kano</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="faq-header">
+      <div class="section-label">FAQ</div>
+      <h2 class="section-title">Questions? <span class="accent">We’ve answered</span> a few.</h2>
+      <p class="section-desc">Everything you need to know before you send your first package or start earning with Racvest.</p>
+    </div>
+    <div class="faq-list">
+      <article class="faq-item reveal">
+        <button class="faq-question" type="button" aria-expanded="false">
+          <span>How does Racvest work for senders?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Post your package details, get matched with a verified courier heading your way, track the delivery in real time, and confirm when it arrives safely.</p>
+        </div>
+      </article>
+      <article class="faq-item reveal">
+        <button class="faq-question" type="button" aria-expanded="false">
+          <span>Can I earn money as a traveller or part-time courier?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Yes. If you already move around by car, bike, or public transport, you can accept deliveries along your route and earn extra income on trips you were already taking.</p>
+        </div>
+      </article>
+      <article class="faq-item reveal">
+        <button class="faq-question" type="button" aria-expanded="false">
+          <span>How do payments stay secure?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Payments are held until the package is successfully delivered and confirmed. That way both senders and couriers have a safer, more transparent experience.</p>
+        </div>
+      </article>
+      <article class="faq-item reveal">
+        <button class="faq-question" type="button" aria-expanded="false">
+          <span>What kind of deliveries can I send?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>You can send documents, parcels, store orders, and other approved items. Fragile or restricted items should follow Racvest’s delivery and safety rules.</p>
+        </div>
+      </article>
+      <article class="faq-item reveal">
+        <button class="faq-question" type="button" aria-expanded="false">
+          <span>Is Racvest available outside Lagos?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Yes. Racvest is built for city-to-city and nationwide delivery, with coverage growing across more states and routes as the courier network expands.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <div class="cta-banner reveal">
+    <h2>Ready to send your first package<br>or start <span style="color:var(--yellow)">earning today?</span></h2>
+    <p>Join thousands of Nigerians already on the Racvest network. It's free to join.</p>
+    <div class="cta-actions">
+      <a class="btn-hero-primary" href="./download.html">📱 Download the App</a>
+      <a class="btn-hero-secondary" href="./contact.html">💬 Talk to Us</a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <a class="footer-logo" href="./index.html"><span class="rac">Rac</span>vest</a>
+    <div class="footer-links">
+      <a href="./index.html">Home</a>
+      <a href="#how">How It Works</a>
+      <a href="#earn">Earn</a>
+      <a href="./download.html">Download</a>
+      <a href="./contact.html">Contact</a>
+      <a href="./terms.html">Terms of Service</a>
+      <a href="./privacy.html">Privacy Policy</a>
+    </div>
+    <div class="footer-copy">© 2025 Racvest. All rights reserved.</div>
+  </footer>
+<script src="./script.js"></script>
+</body>
+</html>

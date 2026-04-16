@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Racvest &mdash; Send Anything. Earn Anywhere.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body data-theme="light">
+<nav id="main-nav">
+  <a class="nav-logo" href="./index.html">
+    <span class="rac">Rac</span><span class="vest">vest</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="./index.html">Home</a></li>
+    <li><a href="./index.html#how">How It Works</a></li>
+    <li><a href="./index.html#earn">Earn</a></li>
+    <li><a href="./download.html">Download</a></li>
+    <li><a href="./contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="theme-toggle" type="button" onclick="toggleTheme()" aria-label="Switch color theme">
+      <span class="theme-toggle-icon" aria-hidden="true">&#9790;</span>
+      <span class="theme-toggle-text"></span>
+    </button>
+    <a class="btn-primary" href="./download.html">Get App</a>
+  </div>
+  <button class="nav-burger" type="button" onclick="toggleMobileNav()" aria-label="Toggle menu" aria-controls="mobile-nav" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="nav-mobile" id="mobile-nav">
+  <button class="nav-mobile-close" type="button" onclick="closeMobileNav()">&times;</button>
+  <button class="theme-toggle mobile-theme-toggle" type="button" onclick="toggleTheme()" aria-label="Switch color theme">
+    <span class="theme-toggle-icon" aria-hidden="true">&#9790;</span>
+    <span class="theme-toggle-text"></span>
+  </button>
+  <a href="./index.html" onclick="closeMobileNav()">Home</a>
+  <a href="./index.html#how" onclick="closeMobileNav()">How It Works</a>
+  <a href="./index.html#earn" onclick="closeMobileNav()">Earn</a>
+  <a href="./download.html" onclick="closeMobileNav()">Download</a>
+  <a href="./contact.html" onclick="closeMobileNav()">Contact</a>
+</div>
+
+<section class="legal-page">
+    <div class="legal-wrap">
+      <div class="legal-hero">
+        <div class="section-label">Legal</div>
+        <h1>Terms of Service</h1>
+        <p>These Terms of Service govern your use of Racvest as a sender, courier, visitor, or business partner. By accessing or using the platform, you agree to the terms below.</p>
+        <div class="legal-meta">
+          <span class="legal-pill">Effective date: April 14, 2026</span>
+          <span class="legal-pill">Applies to web and mobile use</span>
+        </div>
+      </div>
+
+      <div class="legal-content">
+        <article class="legal-card">
+          <h2>1. Using Racvest</h2>
+          <p>Racvest connects users who want to send packages with couriers or travellers who can complete deliveries. You must use the service lawfully, provide accurate information, and avoid activity that could harm other users, Racvest, or the platform.</p>
+        </article>
+
+        <article class="legal-card">
+          <h2>2. Eligibility and Accounts</h2>
+          <p>You are responsible for keeping your account information accurate and secure. If you register as a courier, you may be required to complete identity, safety, or payment verification before accessing delivery opportunities.</p>
+        </article>
+
+        <article class="legal-card">
+          <h2>3. Deliveries and Prohibited Items</h2>
+          <p>Senders must accurately describe every package. Racvest may restrict or remove listings involving unsafe, illegal, hazardous, perishable, or otherwise prohibited items.</p>
+          <ul class="legal-list">
+            <li>No unlawful, stolen, counterfeit, or regulated goods without proper authorization.</li>
+            <li>No items that create unreasonable safety, transport, or reputational risk.</li>
+            <li>Couriers may reject deliveries that do not match the posted description.</li>
+          </ul>
+        </article>
+
+        <article class="legal-card">
+          <h2>4. Payments and Fees</h2>
+          <p>Racvest may charge service fees, platform fees, or other transaction-related charges. Payment timing, releases, refunds, and dispute handling may depend on successful delivery confirmation, internal review, and the payment provider's processing timelines.</p>
+        </article>
+
+        <article class="legal-card">
+          <h2>5. Courier Responsibilities</h2>
+          <p>Couriers are expected to handle packages with care, communicate honestly, follow applicable laws, and complete deliveries responsibly. Repeated cancellations, poor conduct, fraud, or unsafe behavior may result in suspension or termination.</p>
+        </article>
+
+        <article class="legal-card">
+          <h2>6. Platform Availability</h2>
+          <p>We work to keep Racvest available and reliable, but we do not guarantee uninterrupted service, exact delivery times, or platform availability at all times. Features may be updated, changed, or removed as the product evolves.</p>
+        </article>
+
+        <article class="legal-card">
+          <h2>7. Limitation of Liability</h2>
+          <p>To the extent permitted by law, Racvest is not liable for indirect, incidental, special, or consequential losses arising from use of the service. Where applicable, our total liability will be limited to the amount directly connected to the relevant transaction or service use.</p>
+        </article>
+
+        <article class="legal-card">
+          <h2>8. Termination</h2>
+          <p>We may suspend or terminate access where we reasonably believe a user has breached these terms, created risk for the community, or misused the platform. You may also stop using the service at any time.</p>
+        </article>
+
+        <article class="legal-card">
+          <h2>9. Contact</h2>
+          <p>If you have questions about these Terms of Service, please contact Racvest through the Contact page or by email at support@racvest.com.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <a class="footer-logo" href="./index.html"><span class="rac">Rac</span>vest</a>
+    <div class="footer-links">
+      <a href="./index.html">Home</a>
+      <a href="./download.html">Download</a>
+      <a href="./contact.html">Contact</a>
+      <a href="./terms.html">Terms of Service</a>
+      <a href="./privacy.html">Privacy Policy</a>
+    </div>
+    <div class="footer-copy">© 2025 Racvest. All rights reserved.</div>
+  </footer>
+<script src="./script.js"></script>
+</body>
+</html>

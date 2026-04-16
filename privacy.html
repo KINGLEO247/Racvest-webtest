@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Racvest &mdash; Send Anything. Earn Anywhere.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body data-theme="light">
+<nav id="main-nav">
+  <a class="nav-logo" href="./index.html">
+    <span class="rac">Rac</span><span class="vest">vest</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="./index.html">Home</a></li>
+    <li><a href="./index.html#how">How It Works</a></li>
+    <li><a href="./index.html#earn">Earn</a></li>
+    <li><a href="./download.html">Download</a></li>
+    <li><a href="./contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="theme-toggle" type="button" onclick="toggleTheme()" aria-label="Switch color theme">
+      <span class="theme-toggle-icon" aria-hidden="true">&#9790;</span>
+      <span class="theme-toggle-text"></span>
+    </button>
+    <a class="btn-primary" href="./download.html">Get App</a>
+  </div>
+  <button class="nav-burger" type="button" onclick="toggleMobileNav()" aria-label="Toggle menu" aria-controls="mobile-nav" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="nav-mobile" id="mobile-nav">
+  <button class="nav-mobile-close" type="button" onclick="closeMobileNav()">&times;</button>
+  <button class="theme-toggle mobile-theme-toggle" type="button" onclick="toggleTheme()" aria-label="Switch color theme">
+    <span class="theme-toggle-icon" aria-hidden="true">&#9790;</span>
+    <span class="theme-toggle-text"></span>
+  </button>
+  <a href="./index.html" onclick="closeMobileNav()">Home</a>
+  <a href="./index.html#how" onclick="closeMobileNav()">How It Works</a>
+  <a href="./index.html#earn" onclick="closeMobileNav()">Earn</a>
+  <a href="./download.html" onclick="closeMobileNav()">Download</a>
+  <a href="./contact.html" onclick="closeMobileNav()">Contact</a>
+</div>
+
+<section class="legal-page">
+    <div class="legal-wrap">
+      <div class="legal-hero">
+        <div class="section-label">Legal</div>
+        <h1>Privacy Policy</h1>
+        <p>This Privacy Policy explains how Racvest collects, uses, stores, and protects personal information when you use our website, mobile app, and related services.</p>
+        <div class="legal-meta">
+          <span class="legal-pill">Effective date: April 14, 2026</span>
+          <span class="legal-pill">Data use and protection overview</span>
+        </div>
+      </div>
+
+      <div class="legal-content">
+        <article class="legal-card">
+          <h2>1. Information We Collect</h2>
+          <p>We may collect information you provide directly, such as your name, contact details, account credentials, payment details, support messages, delivery information, and identity verification data where needed.</p>
+        </article>
+
+        <article class="legal-card">
+          <h2>2. Operational and Device Data</h2>
+          <p>We may also collect technical and usage information such as device type, browser details, IP address, app activity, approximate location, and interaction data that helps us operate, secure, and improve the service.</p>
+        </article>
+
+        <article class="legal-card">
+          <h2>3. How We Use Information</h2>
+          <ul class="legal-list">
+            <li>To create and manage accounts.</li>
+            <li>To process deliveries, payments, verification, and support requests.</li>
+            <li>To improve platform safety, fraud prevention, and product performance.</li>
+            <li>To communicate service updates, transactional notices, and relevant support information.</li>
+          </ul>
+        </article>
+
+        <article class="legal-card">
+          <h2>4. Sharing of Information</h2>
+          <p>We may share limited information with couriers, senders, payment providers, identity verification providers, analytics tools, customer support systems, and authorities where required by law or necessary to protect users and the platform.</p>
+        </article>
+
+        <article class="legal-card">
+          <h2>5. Data Retention</h2>
+          <p>We retain information for as long as needed to provide services, comply with legal obligations, resolve disputes, enforce agreements, and maintain secure business records.</p>
+        </article>
+
+        <article class="legal-card">
+          <h2>6. Security</h2>
+          <p>Racvest uses reasonable administrative, technical, and operational safeguards to protect personal information. However, no platform or transmission method can be guaranteed completely secure.</p>
+        </article>
+
+        <article class="legal-card">
+          <h2>7. Your Choices</h2>
+          <p>You may request account updates, corrections, or support regarding your personal data. Depending on your location and applicable law, you may also have rights related to access, deletion, objection, or restriction of processing.</p>
+        </article>
+
+        <article class="legal-card">
+          <h2>8. Cookies and Analytics</h2>
+          <p>We may use cookies, local storage, and analytics tools to remember preferences, understand usage patterns, measure performance, and improve the user experience across our services.</p>
+        </article>
+
+        <article class="legal-card">
+          <h2>9. Contact</h2>
+          <p>If you have questions about this Privacy Policy or how Racvest handles personal data, contact us through the Contact page or at support@racvest.com.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <a class="footer-logo" href="./index.html"><span class="rac">Rac</span>vest</a>
+    <div class="footer-links">
+      <a href="./index.html">Home</a>
+      <a href="./download.html">Download</a>
+      <a href="./contact.html">Contact</a>
+      <a href="./terms.html">Terms of Service</a>
+      <a href="./privacy.html">Privacy Policy</a>
+    </div>
+    <div class="footer-copy">© 2025 Racvest. All rights reserved.</div>
+  </footer>
+<script src="./script.js"></script>
+</body>
+</html>
