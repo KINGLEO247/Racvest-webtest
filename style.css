@@ -284,7 +284,7 @@ body[data-theme="dark"] .hero-badge {
 }
 .hero h1 .accent { color: var(--g-bright); }
 .hero h1 .accent-y { color: var(--accent-secondary); }
-.hero-line { white-space: nowrap; }
+.hero-line { white-space: normal; }
 
 .hero-sub {
   font-size: clamp(1.08rem, 2vw, 1.28rem);
@@ -1078,6 +1078,15 @@ h2.section-title .accent-y { color: var(--yellow); }
   font-weight: 800; letter-spacing: -.03em;
   margin-bottom: 1rem;
 }
+.cta-line { white-space: normal; }
+.cta-break { display: block; }
+.cta-banner h2 {
+  max-width: 18ch;
+  margin-left: auto;
+  margin-right: auto;
+  text-wrap: balance;
+  width: min(100%, 28rem);
+}
 .cta-banner p { font-size: 1.18rem; color: var(--muted); margin-bottom: 2rem; font-weight: 500; }
 .cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
@@ -1360,17 +1369,63 @@ body[data-theme="dark"] .dl-feat {
 }
 
 @media (min-width: 769px) {
-  body { font-size: 1.08rem; }
-  p { font-size: 1.12rem; }
-  .hero-sub { font-size: clamp(1rem, 2vw, 1.2rem); }
+  nav { padding: 1rem 4.5%; }
+  section { padding: 5rem 4.5%; }
+  body { font-size: 1.05rem; }
+  p { font-size: 1.08rem; }
+  .hero {
+    min-height: auto;
+    padding: 7rem 4.5% 4rem;
+  }
+  .hero h1 {
+    font-size: clamp(2.6rem, 4.8vw, 4.15rem);
+    max-width: 780px;
+  }
+  .hero-sub {
+    font-size: clamp(1rem, 1.7vw, 1.14rem);
+    max-width: 540px;
+  }
+  .hero-stats {
+    gap: 2.3rem;
+    margin-top: 3.6rem;
+  }
+  .hero-phones {
+    margin-top: 4rem;
+    transform: scale(.94);
+    transform-origin: top center;
+  }
   .section-desc { font-size: 1.12rem; }
+  .how-grid,
+  .dual-section,
+  .features-strip,
+  .faq-list {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .how-card p { font-size: 1rem; }
   .dual-card p { font-size: 1.08rem; }
   .dual-list li { font-size: .95rem; }
   .feat-item p { font-size: .95rem; }
   .testi-text { font-size: 1rem; }
   .faq-answer p { font-size: 1rem; }
-  .download-hero p { font-size: 1.15rem; }
+  .download-hero {
+    min-height: auto;
+    padding: 8rem 4.5% 5rem;
+  }
+  .download-hero h1 {
+    font-size: clamp(2.5rem, 4.8vw, 4.3rem);
+  }
+  .download-hero p { font-size: 1.1rem; }
+  .download-features {
+    max-width: 980px;
+  }
+  .contact-layout {
+    min-height: auto;
+    padding: 8rem 4.5% 5rem;
+    gap: 4rem;
+    max-width: 1000px;
+  }
   .dl-feat p { font-size: .96rem; }
   .contact-info p { font-size: 1.08rem; }
   .contact-item .ci-val { font-size: .95rem; }
@@ -1379,10 +1434,51 @@ body[data-theme="dark"] .dl-feat {
   .form-group select,
   .form-group textarea { font-size: .95rem; }
   .form-success p { font-size: .98rem; }
-  .cta-banner p { font-size: 1.12rem; }
+  .legal-page {
+    min-height: auto;
+    padding: 7rem 4.5% 4rem;
+  }
+  .legal-wrap {
+    max-width: 900px;
+  }
+  .cta-banner {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4rem;
+    padding: 3.2rem 4.5%;
+  }
+  .cta-banner h2 {
+    font-size: clamp(1.3rem, 1.7vw, 1.6rem);
+    line-height: 1.35;
+    width: min(100%, 30rem);
+  }
+  .cta-banner p { font-size: 1.1rem; }
   .social-links {
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero-line { white-space: nowrap; }
+  .cta-banner h2 { width: min(100%, 30rem); }
+}
+
+@media (min-width: 1440px) {
+  html { font-size: 16px; }
+  .hero h1,
+  .download-hero h1 {
+    max-width: 760px;
+  }
+  .contact-layout,
+  .cta-banner,
+  .how-grid,
+  .dual-section,
+  .features-strip,
+  .faq-list {
+    max-width: 1040px;
   }
 }
 
