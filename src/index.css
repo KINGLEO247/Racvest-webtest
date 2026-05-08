@@ -828,8 +828,11 @@ section { padding: 6rem 6%; position: relative; z-index: 1; }
   margin-top: 2rem;
 }
 
-.home-partners .partner-card {
+.home-partners .about-partners-cards {
   --partner-card-width: min(58vw, 240px);
+}
+
+.home-partners .partner-card {
   border-radius: 18px;
 }
 
@@ -1240,12 +1243,16 @@ body[data-theme="dark"] .about-newsletter-form input::placeholder {
 
 .about-partners-cards {
   --partner-card-width: min(78vw, 340px);
+  --partner-gap: 1.25rem;
+  --partner-loop-distance: calc((var(--partner-card-width) + var(--partner-gap)) * 4);
   display: flex;
-  gap: 1.25rem;
+  gap: var(--partner-gap);
   width: max-content;
   min-width: max-content;
   padding: 0 .1rem;
-  animation: partners-scroll 26s linear infinite;
+  animation: partners-scroll 42s linear infinite;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
 }
 
 .partner-card {
@@ -1564,7 +1571,10 @@ body[data-theme="dark"] .about-values .about-value-card .card-icon {
 .reveal.visible { opacity: 1; transform: translateY(0); }
 
 @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-@keyframes partners-scroll { from { transform: translateX(0); } to { transform: translateX(calc(-50% - .625rem)); } }
+@keyframes partners-scroll {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(calc(var(--partner-loop-distance) * -1), 0, 0); }
+}
 @keyframes orb-drift { from { transform: translate(0, 0) scale(1); } to { transform: translate(40px, 30px) scale(1.08); } }
 @keyframes float { 0%, 100% { transform: translateY(0) rotate(var(--rot, 0deg)); } 50% { transform: translateY(-14px) rotate(var(--rot, 0deg)); } }
 @keyframes spin-slow { to { transform: rotate(360deg); } }
@@ -1678,8 +1688,7 @@ body[data-theme="dark"] .about-values .about-value-card .card-icon {
   .about-partners-cards {
     --partner-card-width: min(82vw, 300px);
     padding: 0 .2rem;
-    animation: partners-scroll 16s linear infinite;
-    will-change: transform;
+    animation-duration: 34s;
   }
   .partner-card {
     border-radius: 18px;
@@ -1695,7 +1704,7 @@ body[data-theme="dark"] .about-values .about-value-card .card-icon {
     max-height: 100%;
     object-fit: contain;
   }
-  .home-partners .partner-card {
+  .home-partners .about-partners-cards {
     --partner-card-width: min(64vw, 220px);
   }
   .about-hero-actions { justify-content: center; }
@@ -1766,7 +1775,7 @@ body[data-theme="dark"] .about-values .about-value-card .card-icon {
     border-radius: inherit;
   }
   .about-partners-cards { --partner-card-width: min(84vw, 290px); }
-  .home-partners .partner-card {
+  .home-partners .about-partners-cards {
     --partner-card-width: min(68vw, 210px);
   }
   .partner-card-media {
