@@ -408,7 +408,7 @@ export default function HomePage() {
                     alt={partner.name}
                     className="partner-card-image"
                     decoding="async"
-                    loading="lazy"
+                    loading="eager"
                     src={partner.image}
                   />
                 </div>

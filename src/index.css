@@ -829,7 +829,7 @@ section { padding: 6rem 6%; position: relative; z-index: 1; }
 }
 
 .home-partners .partner-card {
-  flex-basis: min(58vw, 240px);
+  --partner-card-width: min(58vw, 240px);
   border-radius: 18px;
 }
 
@@ -1239,6 +1239,7 @@ body[data-theme="dark"] .about-newsletter-form input::placeholder {
 }
 
 .about-partners-cards {
+  --partner-card-width: min(78vw, 340px);
   display: flex;
   gap: 1.25rem;
   width: max-content;
@@ -1249,7 +1250,7 @@ body[data-theme="dark"] .about-newsletter-form input::placeholder {
 
 .partner-card {
   display: block;
-  flex: 0 0 min(78vw, 340px);
+  flex: 0 0 var(--partner-card-width);
   background: var(--card-bg);
   border: 1px solid var(--border);
   border-radius: 24px;
@@ -1589,7 +1590,7 @@ body[data-theme="dark"] .about-values .about-value-card .card-icon {
   .hero-stats { gap: 2rem; }
   .about-team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .about-approach-grid { grid-template-columns: 1fr 1fr; }
-  .partner-card { flex-basis: min(46vw, 320px); }
+  .about-partners-cards { --partner-card-width: min(46vw, 320px); }
   .hero-phones {
     margin-top: 4rem;
   }
@@ -1675,17 +1676,16 @@ body[data-theme="dark"] .about-values .about-value-card .card-icon {
     display: none;
   }
   .about-partners-cards {
-    min-width: 0;
+    --partner-card-width: min(82vw, 300px);
     padding: 0 .2rem;
     animation: partners-scroll 16s linear infinite;
     will-change: transform;
   }
   .partner-card {
-    flex: 0 0 min(82vw, 300px);
     border-radius: 18px;
   }
   .home-partners .partner-card {
-    flex-basis: min(64vw, 220px);
+    --partner-card-width: min(64vw, 220px);
   }
   .about-hero-actions { justify-content: center; }
   .about-newsletter-form { grid-template-columns: 1fr; }
@@ -1754,11 +1754,9 @@ body[data-theme="dark"] .about-values .about-value-card .card-icon {
   .hero-mobile-image {
     border-radius: inherit;
   }
-  .partner-card {
-    flex-basis: min(84vw, 290px);
-  }
+  .about-partners-cards { --partner-card-width: min(84vw, 290px); }
   .home-partners .partner-card {
-    flex-basis: min(68vw, 210px);
+    --partner-card-width: min(68vw, 210px);
   }
   .stat-num { font-size: 1.6rem; }
   .stat-label { font-size: .78rem; }
