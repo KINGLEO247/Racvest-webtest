@@ -1684,6 +1684,17 @@ body[data-theme="dark"] .about-values .about-value-card .card-icon {
   .partner-card {
     border-radius: 18px;
   }
+  .partner-card-media {
+    aspect-ratio: 4 / 3;
+    min-height: 160px;
+  }
+  .partner-card-image {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
   .home-partners .partner-card {
     --partner-card-width: min(64vw, 220px);
   }
@@ -1757,6 +1768,9 @@ body[data-theme="dark"] .about-values .about-value-card .card-icon {
   .about-partners-cards { --partner-card-width: min(84vw, 290px); }
   .home-partners .partner-card {
     --partner-card-width: min(68vw, 210px);
+  }
+  .partner-card-media {
+    min-height: 140px;
   }
   .stat-num { font-size: 1.6rem; }
   .stat-label { font-size: .78rem; }
