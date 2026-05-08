@@ -817,6 +817,38 @@ section { padding: 6rem 6%; position: relative; z-index: 1; }
 
 .testimonials-section,
 .faq-section { padding-top: 4rem; }
+
+.home-partners {
+  max-width: 1240px;
+  margin: 0 auto 4rem;
+  overflow: hidden;
+}
+
+.home-partners .about-partners-marquee {
+  margin-top: 2rem;
+}
+
+.home-partners .partner-card {
+  flex-basis: min(58vw, 240px);
+  border-radius: 18px;
+}
+
+.home-partners .partner-card-media {
+  padding: .85rem;
+}
+
+.home-partners .partner-card-body {
+  padding: .9rem 1rem 1rem;
+}
+
+.home-partners .partner-card-body h3 {
+  font-size: .94rem;
+}
+
+.home-partners .partner-card-body p {
+  font-size: .82rem;
+}
+
 .testi-track-wrap { overflow: hidden; margin-top: 2.5rem; }
 .testi-track { display: flex; gap: 1.2rem; width: max-content; animation: ticker 28s linear infinite; }
 .testi-card {
@@ -1195,8 +1227,13 @@ body[data-theme="dark"] .about-newsletter-form input::placeholder {
   gap: 1rem;
 }
 
+.about-partners-grid > * {
+  min-width: 0;
+}
+
 .about-partners-marquee {
   width: 100%;
+  min-width: 0;
   overflow: hidden;
   padding: .25rem 0 .35rem;
 }
@@ -1628,8 +1665,28 @@ body[data-theme="dark"] .about-values .about-value-card .card-icon {
   .about-values-grid,
   .about-approach-grid,
   .about-team-grid { grid-template-columns: 1fr; }
-  .partner-card { flex-basis: min(78vw, 320px); }
-  .about-partners-cards { animation-duration: 20s; }
+  .about-partners-marquee {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding: .25rem 0 1rem;
+    scrollbar-width: none;
+  }
+  .about-partners-marquee::-webkit-scrollbar {
+    display: none;
+  }
+  .about-partners-cards {
+    min-width: 0;
+    padding: 0 .2rem;
+    animation: partners-scroll 16s linear infinite;
+    will-change: transform;
+  }
+  .partner-card {
+    flex: 0 0 min(82vw, 300px);
+    border-radius: 18px;
+  }
+  .home-partners .partner-card {
+    flex-basis: min(64vw, 220px);
+  }
   .about-hero-actions { justify-content: center; }
   .about-newsletter-form { grid-template-columns: 1fr; }
   .how-grid, .features-strip, .download-features, .dual-section, .contact-layout { grid-template-columns: 1fr; }
@@ -1697,7 +1754,12 @@ body[data-theme="dark"] .about-values .about-value-card .card-icon {
   .hero-mobile-image {
     border-radius: inherit;
   }
-  .about-partners-cards { animation-duration: 18s; }
+  .partner-card {
+    flex-basis: min(84vw, 290px);
+  }
+  .home-partners .partner-card {
+    flex-basis: min(68vw, 210px);
+  }
   .stat-num { font-size: 1.6rem; }
   .stat-label { font-size: .78rem; }
   .how-card, .feat-item, .dl-feat, .legal-card, .contact-form-wrap { padding: 1.2rem; }

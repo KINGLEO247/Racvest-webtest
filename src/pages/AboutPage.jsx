@@ -11,6 +11,8 @@ import teamLawrence from '../assets/final-optimized/team-zainab.jpg';
 
 const ADD_URL_LINK_HERE = 'add your url link here';
 
+const getSafeHref = (href) => (href === ADD_URL_LINK_HERE ? undefined : href);
+
 const teamMembers = [
   {
     name: 'Lucky  Samuel',
@@ -225,7 +227,7 @@ export default function AboutPage() {
                 <div className="team-socials">
                   {member.socials.map((social) => (
                     <a
-                      href={social.href}
+                      href={getSafeHref(social.href)}
                       key={`${member.name}-${social.label}`}
                       rel="noreferrer"
                       target="_blank"
@@ -284,8 +286,8 @@ export default function AboutPage() {
             <div className="about-partners-cards">
               {scrollingPartners.map((partner, index) => (
                 <a
-                  className="partner-card reveal"
-                  href={partner.href}
+                  className="partner-card"
+                  href={getSafeHref(partner.href)}
                   key={`${partner.name}-${index}`}
                   rel="noreferrer"
                   target="_blank"

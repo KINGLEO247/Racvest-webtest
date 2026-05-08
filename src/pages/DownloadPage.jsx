@@ -4,6 +4,11 @@ import { downloadFeatures } from '../content';
 const ADD_APP_STORE_URL_LINK_HERE = 'add app store url link here';
 const ADD_GOOGLE_PLAY_URL_LINK_HERE = 'add google play url link here';
 
+const getSafeHref = (href) =>
+  href === ADD_APP_STORE_URL_LINK_HERE || href === ADD_GOOGLE_PLAY_URL_LINK_HERE
+    ? undefined
+    : href;
+
 function AppleIcon() {
   return (
     <svg aria-hidden="true" viewBox="0 0 24 24">
@@ -44,7 +49,7 @@ export default function DownloadPage() {
         </p>
 
         <div className="download-badges">
-          <a className="store-badge" href={ADD_APP_STORE_URL_LINK_HERE} rel="noreferrer" target="_blank">
+          <a className="store-badge" href={getSafeHref(ADD_APP_STORE_URL_LINK_HERE)} rel="noreferrer" target="_blank">
             <div className="store-icon" aria-hidden="true">
               <AppleIcon />
             </div>
@@ -53,7 +58,7 @@ export default function DownloadPage() {
               <div className="store-name">App Store</div>
             </div>
           </a>
-          <a className="store-badge" href={ADD_GOOGLE_PLAY_URL_LINK_HERE} rel="noreferrer" target="_blank">
+          <a className="store-badge" href={getSafeHref(ADD_GOOGLE_PLAY_URL_LINK_HERE)} rel="noreferrer" target="_blank">
             <div className="store-icon" aria-hidden="true">
               <GooglePlayIcon />
             </div>

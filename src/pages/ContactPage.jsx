@@ -1,8 +1,18 @@
 import { useEffect, useRef, useState } from 'react';
 
 const contactItems = [
-  { code: 'EM', label: 'Email us', value: 'racvestsupport@gmail.com' },
-  { code: 'PH', label: 'Call us', value: '+234 800 RACVEST' },
+  {
+    code: 'EM',
+    label: 'Email us',
+    value: 'racvestsupport@gmail.com',
+    href: 'mailto:racvestsupport@gmail.com',
+  },
+  {
+    code: 'PH',
+    label: 'Call us',
+    value: '+234 800 RACVEST',
+    href: 'tel:+2348007228378',
+  },
   { code: 'HQ', label: 'Head Office', value: 'Victoria Island, Lagos, Nigeria' },
   { code: '24', label: 'Support Hours', value: '24/7 - Support Available' },
 ];
@@ -15,6 +25,8 @@ const socialLinks = [
   { label: 'Instagram', href: ADD_URL_LINK_HERE },
   { label: 'Facebook', href: ADD_URL_LINK_HERE },
 ];
+
+const getSafeHref = (href) => (href === ADD_URL_LINK_HERE ? undefined : href);
 
 export default function ContactPage() {
   const timerRef = useRef(null);
@@ -52,22 +64,26 @@ export default function ContactPage() {
         </p>
 
         <div className="contact-items">
-          {contactItems.map((item) => (
-            <div className="contact-item reveal" key={item.label}>
-              <div className="ci-icon">{item.code}</div>
-              <div>
-                <div className="ci-label">{item.label}</div>
-                <div className="ci-val">{item.value}</div>
-              </div>
-            </div>
-          ))}
+          {contactItems.map((item) => {
+            const ContactItem = item.href ? 'a' : 'div';
+
+            return (
+              <ContactItem className="contact-item reveal" href={item.href} key={item.label}>
+                <div className="ci-icon">{item.code}</div>
+                <div>
+                  <div className="ci-label">{item.label}</div>
+                  <div className="ci-val">{item.value}</div>
+                </div>
+              </ContactItem>
+            );
+          })}
         </div>
 
         <div className="contact-socials">
           <div className="section-label contact-social-label">Follow us</div>
           <div className="social-links">
             {socialLinks.map((social) => (
-              <a className="social-link" href={social.href} key={social.label}>
+              <a className="social-link" href={getSafeHref(social.href)} key={social.label}>
                 {social.label}
               </a>
             ))}

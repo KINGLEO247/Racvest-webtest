@@ -1,7 +1,11 @@
 import { Link } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
+import partnerFastora from '../assets/final-optimized/fastora-express.jpg';
 import heroPhonesImage from '../assets/hero-phones-optimized.jpg';
 import mobileJoinImage from '../assets/mobile-hero/mobile-join-optimized.png';
+import partnerPaceGo from '../assets/final-optimized/pacego-courier.jpg';
+import partnerSwiftBox from '../assets/final-optimized/swiftbox-logistics.jpg';
+import partnerZentro from '../assets/final-optimized/zentro-deliveries.jpg';
 import {
   earnerFeatures,
   faqs,
@@ -19,6 +23,39 @@ const mobileHeroImages = [
     alt: 'Racvest mobile app preview showing join racvest screen',
   },
 ];
+
+const ADD_URL_LINK_HERE = 'add your url link here';
+
+const getSafeHref = (href) => (href === ADD_URL_LINK_HERE ? undefined : href);
+
+const partners = [
+  {
+    name: 'PaceGo Courier',
+    category: 'Courier Network Partner',
+    image: partnerPaceGo,
+    href: ADD_URL_LINK_HERE,
+  },
+  {
+    name: 'Zentro Deliveries',
+    category: 'Last-Mile Delivery Partner',
+    image: partnerZentro,
+    href: ADD_URL_LINK_HERE,
+  },
+  {
+    name: 'SwiftBox Logistics',
+    category: 'Logistics Infrastructure Partner',
+    image: partnerSwiftBox,
+    href: ADD_URL_LINK_HERE,
+  },
+  {
+    name: 'Fastora Express',
+    category: 'Express Delivery Partner',
+    image: partnerFastora,
+    href: ADD_URL_LINK_HERE,
+  },
+];
+
+const scrollingPartners = [...partners, ...partners];
 
 function DownloadIcon() {
   return (
@@ -348,6 +385,40 @@ export default function HomePage() {
               </article>
             );
           })}
+        </div>
+      </section>
+
+      <section className="home-partners">
+        <div className="section-label">Partners</div>
+        <h2 className="section-title">
+          Brands moving with <span className="accent">Racvest</span>.
+        </h2>
+        <div className="about-partners-marquee">
+          <div className="about-partners-cards">
+            {scrollingPartners.map((partner, index) => (
+              <a
+                className="partner-card"
+                href={getSafeHref(partner.href)}
+                key={`${partner.name}-${index}`}
+                rel="noreferrer"
+                target="_blank"
+              >
+                <div className="partner-card-media">
+                  <img
+                    alt={partner.name}
+                    className="partner-card-image"
+                    decoding="async"
+                    loading="lazy"
+                    src={partner.image}
+                  />
+                </div>
+                <div className="partner-card-body">
+                  <h3>{partner.name}</h3>
+                  <p>{partner.category}</p>
+                </div>
+              </a>
+            ))}
+          </div>
         </div>
       </section>
 
